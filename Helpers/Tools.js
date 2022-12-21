@@ -6,3 +6,11 @@ const readingFile = util.promisfy(fs.readFile)
 const writeTheFile = (location,user) =>
   fs.writeFile(location, JSON.stringify(user, null, 4), (err) =>
   err ? console.error(err) : console.info(`\nData written to ${location}`))
+
+
+  function userActive(login,logout){
+    let DateTime = new Date().toJSON();
+ if(loginFormHandler == true){
+
+ }
+  }
