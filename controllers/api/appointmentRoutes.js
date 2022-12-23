@@ -1,6 +1,16 @@
 const router = require('express').Router();
 const { Appointment } = require('../../models');
 
+router.get('/', (req, res) => {
+  Appointment.findAll({
+  })
+    .then(dbAppointmentData => res.json(dbAppointmentData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.post('/', async (req, res) => {
   try {
     const newAppointment = await Appointment.create({
