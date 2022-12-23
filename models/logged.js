@@ -4,11 +4,16 @@ const sequelize = require(`../config/connection`)
 class loggedX extends model{}
 loggedX.init (
     {
+        id:{
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement:true
+        },
         user_name:{
             type: Datatypes.INTEGER,
             refrences: {
                 model: 'User',
-                foreignKey: 'id'
+                Key: 'id'
             }
         },
         // to check if this is a user that is logged in 
@@ -28,7 +33,7 @@ loggedX.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'loggedX',
+        modelName: 'logged',
      }
 )
 module.exports = loggedX;
