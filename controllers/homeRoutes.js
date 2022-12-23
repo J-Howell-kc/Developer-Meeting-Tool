@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
+const sequelize = require('../config/connection')
 
 router.get('/', async (req, res) => {
   try {
@@ -46,4 +47,13 @@ router.get('/public_profile_view', (req, res) => {
 
   res.render('public_profile_view');
 });
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('signup');
+});
+
 module.exports = router;
