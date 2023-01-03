@@ -15,7 +15,13 @@ router.post('/', async (req, res) => {
   try {
     const newAppointment = await Appointment.create({
       ...req.body,
+      title: req.body.title,
+      start_date: req.body.start_date,
+      start_time: req.body.start_time,
+      description: req.body.description,
+      date_created: req.body.date_created,
       user_id: req.session.user_id,
+
     });
 
     res.status(200).json(newAppointment);
