@@ -1,23 +1,47 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Post, Comment } = require('../models');
 const sequelize = require('../config/connection')
 
-router.get('/', async (req, res) => {
-  try {
-    // const userData = await User.findAll({
-    //   attributes: { exclude: ['password'] },
-    //   order: [['name', 'ASC']],
-    // });
-
-    //const users = userData.map((project) => project.get({ plain: true }));
+router.get('/', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  Post.findAll({
+    attributes: [
+        'id',
+        'title',
+        'post_content',
+        'created_at'
+    ],
+    include: [{
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        },
+        {
+            model: User,
+            attributes: ['username']
+        }
+    ]
+})
+.then(dbPostData => {
+    const posts = dbPostData.map(post => post.get({
+        plain: true
+    }));
 
     res.render('landing', {
-      
-      loggedIn: req.session.loggedIn,
+        posts,
+        loggedIn: req.session.loggedIn
     });
-  } catch (err) {
+})
+.catch(err => {
+    console.log(err);
     res.status(500).json(err);
-  }
+});
 });
 
 router.get('/login', (req, res) => {
@@ -30,22 +54,35 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-  
-
-  res.render('profile');
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('profile', {
+      loggedIn: req.session.loggedIn,
+  });;
 });
 
 router.get('/dashboard', (req, res) => {
-  
-
-  res.render('dashboard');
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('dashboard', {
+      loggedIn: req.session.loggedIn,
+  });;
 });
 
 router.get('/public_profile_view', (req, res) => {
-  
-
-  res.render('public_profile_view');
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('public_profile_view', {
+      loggedIn: req.session.loggedIn,
+  });;
 });
+
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -53,6 +90,61 @@ router.get('/signup', (req, res) => {
   }
 
   res.render('signup');
+});
+
+router.get('/landing', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('landing');
+});
+
+router.get('/post/:id', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+  Post.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      'id',
+      'post_content',
+      'title',
+      'created_at'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found' });
+        return;
+      }
+
+      const post = dbPostData.get({ plain: true });
+
+      res.render('single-post', { post, loggedIn: req.session.loggedIn});
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
