@@ -32,3 +32,6 @@ const AppointmentData = [
         user_id:5
     }
 ]
+const AppointmentSeeds = () => Appointment.bulkCreate(AppointmentData);
+
+module.exports = AppointmentSeeds
