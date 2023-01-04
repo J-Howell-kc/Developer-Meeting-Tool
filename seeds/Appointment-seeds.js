@@ -18,17 +18,17 @@ const AppointmentData = [
         description:'our scrum meeting will take place at the coffee shop',
         date_created:10-27-2022,
         user_id:3
-    }
+    },
     {
         name:'gabriella martinez',
         description:'tonight is our python practice be ready!',
         date_created:10-27-2022,
         user_id:4
-    }
+    },
     {
-        name:'',
-        description:'',
-        date_created:,
-        user_id:
+        name:'raven martin',
+        description:'alright team we will finish this project this saturday.',
+        date_created:12-5-2022,
+        user_id:5
     }
 ]
