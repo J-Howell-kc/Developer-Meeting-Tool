@@ -1,0 +1,13 @@
+loginForm {
+    
+    margin-top: 150px;
+}
+
+.banner {
+    margin-top: 50px;
+}
+
+.controls {
+    display:flex;
+    justify-content: space-around;
+}
