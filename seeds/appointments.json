@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Js Practice",
+        "location": "Starbucks",
+        "start_date": "01-04-2023",
+        "start_time": "6:00pm",
+        "event_name": "Nate",
+        "description": "Meet at starbucks to study JS"
+    },
+    {
+        "title": "SQL",
+        "location": "Library",
+        "start_date": "01-20-2023",
+        "start_time": "12:00pm",
+        "event_name": "Jose",
+        "description": "Meet at starbucks to study JS"
+    },
+    {
+        "title": "Js Practice",
+        "location": "Starbucks",
+        "start_date": "01-16-2023",
+        "start_time": "6:00pm",
+        "event_name": "Nate",
+        "description": "Meet at starbucks to study JS"
+    },
+    {
+        "title": "Js Practice",
+        "location": "Starbucks",
+        "start_date": "01-28-2023",
+        "start_time": "6:00pm",
+        "event_name": "Nate",
+        "description": "Meet at starbucks to study JS"
+    }
+]
