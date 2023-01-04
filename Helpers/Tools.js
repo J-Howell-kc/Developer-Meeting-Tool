@@ -1,16 +1,12 @@
 const fs =  require('fs');
-const util = require('util')
+const util = require('util');
 
-const readingFile = util.promisfy(fs.readFile) 
-
-const writeTheFile = (location,user) =>
-  fs.writeFile(location, JSON.stringify(user, null, 4), (err) =>
+// reading file  for reading different modules for data working with apis
+const readingFile = util.promisify(fs.readFile);
+//a function intended for writing down data to the file you want (location)
+const writeTheFile = (location,login) =>{
+  fs.writeFile(location, JSON.stringify(login, null, 4), (err) =>
   err ? console.error(err) : console.info(`\nData written to ${location}`))
+}
 
-
-  function userActive(login,logout){
-    let DateTime = new Date().toJSON();
- if(loginFormHandler == true){
-
- }
-  }
+  module.exports =  {writeTheFile , readingFile}
