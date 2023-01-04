@@ -1,6 +1,31 @@
 [
     {
         "username": "Tom_theDev",
-        "email": "Thomasmontgomery@gmail.com"
+        "email": "Thomasmontgomery@gmail.com",
+        "password": "pizzaislife1234"
+    },
+    {
+        "username":"kimmy1992",
+        "email":"kimberleyevans@gamil.",
+        "password":""
+
+    },
+    {
+        "username":"",
+        "email":"",
+        "password":""
+
+    },
+    {
+        "username":"",
+        "email":"",
+        "password":""
+
+    },
+    {
+        "username":"",
+        "email":"",
+        "password":""
+
     }
 ]
