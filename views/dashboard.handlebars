@@ -1,3 +1,4 @@
+
 <h3 class="text-center">Dashboard</h3>
 <div class="controls">
   <div>
@@ -15,6 +16,7 @@
   <img src="./imgs/calendarimage2.avif" />
 </div>
 {{!-- <section class="row">
+
   <div class = "column">
     <h2>Create New Post</h2> 
 
@@ -27,13 +29,55 @@
         <label for="post-content">Text</label>
         <textarea id="post-content" name="post-content"></textarea>
       </div>
-      {{!-- <button type="submit" class="btn">Create</button>
+      <button type="submit" class="btn">Create</button>
     </form>
   </div>
 
 </section>
-
-{{!-- {{#if posts.length}}
+<div id="calendar"></div>
+<div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Event info</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="event-title" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="event-title">
+              </div>
+              <div class="mb-3">
+                <label for="event-creator" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="event-creator">
+              </div>
+              <div class="mb-3">
+                <label for="event-des" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="event-des"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="event-location" class="col-form-label">Location:</label>
+                <input type="text" class="form-control" id="event-location">
+              </div>
+              <div class="mb-3">
+                <label for="event-start" class="col-form-label">Start Time:</label>
+                <input type="text" class="form-control" id="event-start-time">
+              </div>
+              <div class="mb-3">
+                <label for="event-time" class="col-form-label">Start Date:</label>
+                <input type="text" class="form-control" id="datepicker">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="postBtn">Post Event</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -45,6 +89,13 @@
     {{/each}}
   </ol>
 </section>
-{{/if}} --}}
+{{/if}}
 
-<script src="/javascript/addpost.js"></script>
+<script src="/javascript/addpost.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.1/index.global.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="/javascript/calendar.js"></script>
+<script src="/javascript/appointment.js"></script>
+
+

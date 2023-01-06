@@ -5,17 +5,27 @@ router.get('/', (req, res) => {
   Appointment.findAll({
   })
     .then(dbAppointmentData => res.json(dbAppointmentData))
+    
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+   
 });
 
 router.post('/', async (req, res) => {
   try {
     const newAppointment = await Appointment.create({
-      ...req.body,
-      user_id: req.session.user_id,
+      
+      title: req.body.title,
+      event_name: req.body.event_name,
+      start_date: req.body.start_date,
+      start_time: req.body.start_time,
+      description: req.body.description,
+      date_created: req.body.date_created,
+      location: req.body.location,
+      user_id: req.session.user_id
+
     });
 
     res.status(200).json(newAppointment);

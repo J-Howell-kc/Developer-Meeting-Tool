@@ -1,0 +1,31 @@
+[
+    {
+        "username": "Tom_theDev",
+        "email": "Thomasmontgomery@gmail.com",
+        "password": "pizzaislife1234"
+    },
+    {
+        "username":"kimmy1992",
+        "email":"kimberleyevans@gamil.com",
+        "password":"madeinNinetyTwo"
+
+    },
+    {
+        "username":"mrPort816",
+        "email":"jamesPorter@gmail.com",
+        "password":"imPortable853"
+
+    },
+    {
+        "username":"gabriellaPython",
+        "email":"gabriellamartinez@gmail.com",
+        "password":"pythonLover1234"
+
+    },
+    {
+        "username":"ravencodes",
+        "email":"ravenmartin@gmail.com",
+        "password":"ravenspike2312"
+
+    }
+]
