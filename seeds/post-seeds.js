@@ -1,4 +1,6 @@
-[
+const { Post } = require('../models')
+
+const postData = [
     {
         title:'HERE I COME!',
         post_content:'sorry guys im running ',
@@ -30,3 +32,4 @@
 
     },
 ]
+const postSeeds = () => Post.bulkCreate(postData)
