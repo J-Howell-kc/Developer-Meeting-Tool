@@ -12,7 +12,7 @@ loginForm {
     justify-content: space-around;
 }
 
-profileForm {
+#profileForm {
     display:flex;
     justify-content: center;
     margin-top:150px;
