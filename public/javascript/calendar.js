@@ -1,3 +1,15 @@
+async function addEvents(){
+    try {
+        const res = await fetch('/api/appointments',)
+        console.log(res.json);
+        return await res.json();
+        
+        
+    } catch (error) {
+        console.log(error);
+    }
+    
+};
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
     
@@ -9,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        events: [
-            
-        ]
+        events: [],
 
     });
     
