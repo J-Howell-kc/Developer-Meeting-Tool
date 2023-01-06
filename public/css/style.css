@@ -12,6 +12,8 @@ loginForm {
     justify-content: space-around;
 }
 
+
+
 #profileForm {
     display:flex;
     justify-content: center;
@@ -19,3 +21,4 @@ loginForm {
     margin-left: 25px;
     margin-right: 25px;
 }
+

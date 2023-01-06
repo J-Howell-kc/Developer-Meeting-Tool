@@ -11,12 +11,27 @@ Appointment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    start_date: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    start_time: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    event_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
+    },
+    location: {
+      type: DataTypes.STRING
     },
     date_created: {
       type: DataTypes.DATE,
