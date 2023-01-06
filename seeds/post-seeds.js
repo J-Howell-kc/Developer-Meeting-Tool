@@ -12,21 +12,21 @@
 
     },
     {
-        title:'',
-        post_content:'',
-        user_id:''
+        title:'nice meeting',
+        post_content:'good work today guys have finished the project together cant wait to deploy',
+        user_id:5
 
     },
     {
-        title:'',
-        post_content:'',
-        user_id:''
+        title:'meetings off',
+        post_content:'sorry guys something important just came up i had to cancel i will reschedule soon.',
+        user_id:2
 
     },
     {
-        title:'',
-        post_content:'',
-        user_id:''
+        title:'The bug',
+        post_content:'is that bug still lingering? ill handle it if so',
+        user_id:4
 
     },
 ]
