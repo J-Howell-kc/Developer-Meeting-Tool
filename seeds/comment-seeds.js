@@ -1,4 +1,5 @@
 const { Comment } = require('../models')
+const { bulkCreate } = require('../models/User')
 
 const commentData = [
     {
@@ -14,11 +15,12 @@ const commentData = [
     {
         comment_text:'this park is really beautiful one of the reasons i come here lol',
         user_id:1,
-        post_id:3
-    }
+        post_id:2
+    },
     {
-        comment_text:'',
-        user_id:''
-        post_id
+        comment_text:'just fixed the bug and tested the build should be all good now',
+        user_id:4,
+        post_id:5
     }
 ]
+commentSeeds = () => Comment.bulkCreate(commentData)
