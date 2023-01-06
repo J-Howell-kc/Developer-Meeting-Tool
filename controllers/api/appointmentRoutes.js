@@ -5,10 +5,12 @@ router.get('/', (req, res) => {
   Appointment.findAll({
   })
     .then(dbAppointmentData => res.json(dbAppointmentData))
+    
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+   
 });
 
 router.post('/', async (req, res) => {
