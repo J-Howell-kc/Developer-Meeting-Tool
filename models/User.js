@@ -32,8 +32,17 @@ User.init({
         validate: {
             len: [6]
         }
-    }
-}, {
+    },
+    // organization : {
+    //     type: DataTypes.STRING,
+    //     allowNull: false
+    // },
+    // info : {
+    //     type: DataTypes.STRING,
+    //     allowNull: false
+    // }
+    }, 
+    {
     hooks: {
         async beforeCreate(newUserData) {
             newUserData.password = await bcrypt.hash(newUserData.password, 10);

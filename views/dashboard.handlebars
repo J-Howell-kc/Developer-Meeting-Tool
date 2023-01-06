@@ -8,14 +8,11 @@
   <div class="d-flex flex-column">
     <button class="mt-2 btn btn-primary">My Profile</button>
     <button class="mt-2 btn btn-primary">Message Board</button>
-    <button class="mt-2 btn btn-primary">Create Meetup</button>
+    <button class = 'mt-2 btn btn-primary' data-bs-toggle="modal" data-bs-target="#createEventModal">Create Meetup</button>
     <button class = 'mt-2 btn btn-secondary'>Log Out</button> 
   </div>
 </div>
-<div class="card d-flex justify-content:center">
-  <img src="./imgs/calendarimage2.avif" />
-</div>
-{{!-- <section class="row">
+<section class="row">
 
   <div class = "column">
     <h2>Create New Post</h2> 
@@ -72,7 +69,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="postBtn">Post Event</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="postBtn">Post Event</button>
           </div>
         </div>
       </div>
