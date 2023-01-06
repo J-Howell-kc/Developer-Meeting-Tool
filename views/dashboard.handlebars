@@ -1,22 +1,22 @@
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-<h3 class = "text-center">Dashboard</h3>
-<div class = "controls">
-<div>
+<h3 class="text-center">Dashboard</h3>
+<div class="controls">
+  <div>
     <h1>Username</h1>
-    <img class = "w-25" src = "./imgs/cactus.webp">
+    <img class="w-25" src="./imgs/cactus.webp" />
+  </div>
+  <div class="d-flex flex-column">
+    <button class="mt-2 btn btn-primary">My Profile</button>
+    <button class="mt-2 btn btn-primary">Message Board</button>
+    <button class="mt-2 btn btn-primary">Create Meetup</button>
+    <button class = 'mt-2 btn btn-secondary'>Log Out</button> 
+  </div>
 </div>
-<div class = "d-flex flex-column">
-    <button class = 'mt-2 btn btn-primary'>My Profile</button>
-    <button class = 'mt-2 btn btn-primary'>Message Board</button>
-    <button class = 'mt-2 btn btn-primary' data-bs-toggle="modal" data-bs-target="#createEventModal">Create Meetup</button>
-    {{!-- <button class = 'btn btn-secondary'>Log Out</button> --}}
+<div class="card d-flex justify-content:center">
+  <img src="./imgs/calendarimage2.avif" />
 </div>
-</div>
-{{!-- <div class="jumbotron">
-    <img src = "./imgs/calendarimage2.avif">
-</div> --}}
- <section class="row">
+{{!-- <section class="row">
+
   <div class = "column">
     <h2>Create New Post</h2> 
 
@@ -97,4 +97,5 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="/javascript/calendar.js"></script>
 <script src="/javascript/appointment.js"></script>
+
 

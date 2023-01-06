@@ -11,3 +11,13 @@ loginForm {
     display:flex;
     justify-content: space-around;
 }
+
+
+profileForm {
+    display:flex;
+    justify-content: center;
+    margin-top:150px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
