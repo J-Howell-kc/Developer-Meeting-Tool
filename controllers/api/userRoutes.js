@@ -15,6 +15,40 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+    User.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: { exclude: ['password']},
+      include: [
+        {
+          model: Post,
+          attributes: ['id', 'title', 'post_content', 'created_at']
+        },
+        {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'created_at'],
+            include: {
+              model: Post,
+              attributes: ['title']
+            }
+        }
+      ]
+    })
+      .then(dbUserData => {
+        if (!dbUserData) {
+          res.status(404).json({ message: "No User found" });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
@@ -81,5 +115,44 @@ router.post('/logout', withAuth, (req, res) => {
     res.status(404).end();
   }
 })
+
+router.put("/:id", withAuth, (req, res) => {
+    User.update(req.body, {
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbUserData => {
+        if (!dbUserData[0]) {
+            res.status(404).json({ message: "No user found"});
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch(err => {
+        console.log(err); 
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', withAuth, (req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(404).json({ message: "No user found"});
+                return;
+            }
+            res.json(dbUserData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 module.exports = router;
