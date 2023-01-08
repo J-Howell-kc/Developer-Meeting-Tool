@@ -15,7 +15,7 @@ Appointment.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    start_date: {
+    start: {
       type: DataTypes.STRING,
       allowNull: false,
     },

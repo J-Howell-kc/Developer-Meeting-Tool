@@ -2,7 +2,7 @@
     {
         "title": "Js Practice",
         "location": "Starbucks",
-        "start_date": "01-04-2023",
+        "start": "2023-01-04",
         "start_time": "6:00pm",
         "event_name": "Nate",
         "description": "Meet at starbucks to study JS"
@@ -10,7 +10,7 @@
     {
         "title": "SQL",
         "location": "Library",
-        "start_date": "01-20-2023",
+        "start": "2023-01-20",
         "start_time": "12:00pm",
         "event_name": "Jose",
         "description": "Meet at library to study SQl"
@@ -18,7 +18,7 @@
     {
         "title": "General",
         "location": "Zoom",
-        "start_date": "01-16-2023",
+        "start": "2023-01-16",
         "start_time": "6:00pm",
         "event_name": "Nate",
         "description": "Meet online to go over multiple subjects"
@@ -26,7 +26,7 @@
     {
         "title": "Js Review",
         "location": "Zoom",
-        "start_date": "01-28-2023",
+        "start": "2023-01-28",
         "start_time": "4:00pm",
         "event_name": "Nate",
         "description": "Meet online to study JS"
