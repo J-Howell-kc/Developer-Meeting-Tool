@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
       
       title: req.body.title,
       event_name: req.body.event_name,
-      start_date: req.body.start_date,
+      start: req.body.start,
       start_time: req.body.start_time,
       description: req.body.description,
       date_created: req.body.date_created,
