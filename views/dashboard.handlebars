@@ -7,45 +7,12 @@
   </div>
   <div class="d-flex flex-column">
     <button class="mt-2 btn btn-primary">My Profile</button>
-    <button class="mt-2 btn btn-primary">Message Board</button>
+    <a href="/messageboard"><button class="mt-2 btn btn-primary">Message Board</button></a>
     <button class = 'mt-2 btn btn-primary' data-bs-toggle="modal" data-bs-target="#createEventModal">Create Meetup</button>
     <button class = 'mt-2 btn btn-secondary'>Log Out</button> 
   </div>
 </div>
-<section class="row">
 
-  <div class = "column">
-    <h2>Create New Post</h2> 
-
-    <form class="new-post-form">
-      <div>
-        <label for="post-title">Title</label>
-        <input type="text" id="post-title" name="post-title" />
-      </div>
-      <div>
-        <label for="post-content">Text</label>
-        <textarea id="post-content" name="post-content"></textarea>
-      </div>
-      <button type="submit" class="btn">Create</button>
-    </form>
-  </div>
-
-{{#if posts.length}}
-<section>
-  <h2>Message Board</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-
-</section>
 <div id="calendar"></div>
 <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
