@@ -53,26 +53,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/profile', (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-    return;
-  }
-  res.render('profile', {
-      loggedIn: req.session.loggedIn,
-  });;
-});
-
-router.get('/dashboard', (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-    return;
-  }
-  res.render('dashboard', {
-      loggedIn: req.session.loggedIn,
-  });;
-});
-
 router.get('/public_profile_view', (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
