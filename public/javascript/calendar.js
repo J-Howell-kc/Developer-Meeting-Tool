@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
     
+    var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         initialDate: '2023-01-03',
@@ -11,8 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
         eventClick: function(info) {
+            let popup = document.getElementById('dialog-message')
+            $( "#dialog-message" ).dialog({
+                modal: true,
+                buttons: {
+                  Ok: function() {
+                    $( this ).dialog( "close" );
+                  }
+                }
+              });
+
             
-            console.log(info.event.id);
+            console.log(info.event);
            
         
             
