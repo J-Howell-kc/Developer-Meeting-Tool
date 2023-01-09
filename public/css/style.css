@@ -6,6 +6,8 @@ h1 {
 h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+    margin-left: 240px;
+    margin-top: 50px;
 }
 
 .button {
@@ -32,7 +34,7 @@ h3 {
 .profileForm {
     display:flex;
     justify-content: center;
-    margin-top:150px;
+    margin-top:50px;
     margin-left: 25px;
     margin-right: 25px;
 }
