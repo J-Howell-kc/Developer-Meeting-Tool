@@ -1,4 +1,19 @@
-loginForm {
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.loginForm {
     
     margin-top: 150px;
 }
@@ -13,7 +28,8 @@ loginForm {
 }
 
 
-profileForm {
+
+.profileForm {
     display:flex;
     justify-content: center;
     margin-top:150px;
