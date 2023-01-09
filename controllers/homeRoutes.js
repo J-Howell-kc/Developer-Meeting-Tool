@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
         plain: true
     }));
 
-    res.render('landing', {
+    res.render('dashboard', {
         posts,
         loggedIn: req.session.loggedIn
     });
