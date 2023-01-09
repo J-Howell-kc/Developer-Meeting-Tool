@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
+        eventClick: function(info) {
+            
+            console.log(info.event.id);
+           
+        
+            
+          },
         events: '/api/appointments',
 
     });
