@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Project 2: A tool for Jr Devs and students to connect and meetup for coding study and discussion.",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
     "fullcalendar": "^6.0.0",
     "preact": "^10.11.3",
@@ -16,10 +20,7 @@
     "sequelize": "^6.27.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/J-Howell-kc/Developer-Meeting-Tool.git"
