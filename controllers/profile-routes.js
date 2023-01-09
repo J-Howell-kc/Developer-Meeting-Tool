@@ -1,8 +1,8 @@
 //Dependencies
-const { Profile } = require('../../models');
+const { Profile } = require('../models');
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const withAuth = require('../../utils/auth');
+const sequelize = require('../config/connection');
+const withAuth = require('../utils/auth');
 
 //Routes
 router.get('/', (req, res) => {
@@ -14,7 +14,9 @@ router.get('/', (req, res) => {
             'user_id'
         ],
     })
-      .then(dbProfileData => res.json(dbProfileData))
+      .then(dbProfileData => {
+        const profile = dbProfileData.map(profile => profile.get({ plain: true }));
+        res.render('profile', { profile, loggedIn: true });})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
