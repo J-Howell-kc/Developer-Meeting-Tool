@@ -1,9 +1,10 @@
         <nav>
-          <span><a href="/">home</a></span> 
+          <a href="/"><button class="btn-no-style">home</button></a>
           {{#if loggedIn}}
-          <a href="/dashboard">dashboard</a>
+          <a href="/dashboard"><button class="btn-no-style">dashboard</button></a>
+          <a href="/messageboard"><button class="btn-no-style">message board</button></a>
           <button id="logout" class="btn-no-style">logout</button>
           {{else}}
-          <a href="/login">login</a>
+          <a href="/login"><button class="btn-no-style">login</button></a>
           {{/if}}
         </nav>

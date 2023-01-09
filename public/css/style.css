@@ -21,3 +21,17 @@ profileForm {
     margin-right: 25px;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
