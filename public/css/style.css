@@ -1,4 +1,21 @@
-loginForm {
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-left: 240px;
+    margin-top: 50px;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.loginForm {
     
     margin-top: 150px;
 }
@@ -14,11 +31,25 @@ loginForm {
 
 
 
-#profileForm {
+.profileForm {
     display:flex;
     justify-content: center;
-    margin-top:150px;
+    margin-top:50px;
     margin-left: 25px;
     margin-right: 25px;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
