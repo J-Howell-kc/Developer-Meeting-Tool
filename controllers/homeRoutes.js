@@ -3,10 +3,6 @@ const { User, Post, Comment } = require('../models');
 const sequelize = require('../config/connection')
 
 router.get('/', (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-    return;
-  }
   Post.findAll({
     attributes: [
         'id',
@@ -33,7 +29,7 @@ router.get('/', (req, res) => {
         plain: true
     }));
 
-    res.render('dashboard', {
+    res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn
     });
@@ -70,15 +66,6 @@ router.get('/signup', (req, res) => {
   }
 
   res.render('signup');
-});
-
-router.get('/landing', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('landing');
 });
 
 router.get('/post/:id', (req, res) => {
