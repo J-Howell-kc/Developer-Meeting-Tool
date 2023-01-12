@@ -1,20 +1,21 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-<h3 class="text-center">Dashboard</h3>
-<div class="controls">
-  <div>
+
+<div class="container">
+  <div class="controls">
+  <div class="mb-2">
     <h1>Username</h1>
     <img class="w-25" src="./imgs/devUnite1.jpg" />
   </div>
-  <div class="d-flex flex-column">
-    <a href="/profiles"><button id="weird" class="mt-2 btn btn-primary">My Profile</button></a>
-    <a href="/messageboard"><button class="mt-2 btn btn-primary">Message Board</button></a>
-    <button class = 'mt-2 btn btn-primary' data-bs-toggle="modal" data-bs-target="#createEventModal">Create Meetup</button>
+  <div class="d-flex flex-column justify-content-end mb-2">
+   
+    <button class = 'mt-2 btn btn-success' data-bs-toggle="modal" data-bs-target="#createEventModal">Create Meetup</button>
   </div>
 </div>
-
 <div id="calendar"></div>
+</div>
 <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
