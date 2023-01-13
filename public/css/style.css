@@ -128,3 +128,7 @@ header {
   #create-new-post {
     width: 15%;
   }
+
+  .bodybg {
+    background-color: #e5ece9
+  }
