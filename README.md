@@ -37,4 +37,7 @@ https://github.com/https://github.com/J-Howell-kc <br/>
 Feel free to direct any questions to howell_j@hotmail.com. Thanks.
 
 ## Screenshot
-![screenshot](Add once I have screenshot);
+![screenshot](/public/imgs/login21024_1.jpg)
+![screenshot](/public/imgs/dashboard1024_1.jpg)
+![screenshot](/public/imgs/message%20board1024_1.jpg)
+![screenshot](/public/imgs/profile-1.jpg)
