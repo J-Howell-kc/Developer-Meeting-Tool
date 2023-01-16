@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         let eventLocation = 'Location: '+element.location;
                         let eventDate = 'Date: '+element.start;
                         let startTime = 'Start Time: '+element.start_time
-                        console.log(element.start+element.start_time);
+                        
                         mEvent.append(eventName);
                         dateEvent.append(eventDate);
                         sEvent.append(startTime);
